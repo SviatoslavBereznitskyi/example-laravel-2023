@@ -1,0 +1,39 @@
+{
+    "port": 8001,
+    "engine": "memory",
+    "allowed_origins": [
+        "http://api.localhost",
+        "http://localhost",
+        "*"
+    ],
+    "proxy_connect_endpoint": "http://api/api/v1/centrifugo/connect",
+    "proxy_http_headers": [
+        "Origin",
+        "User-Agent",
+        "Authorization",
+        "Cookie",
+        "X-Real-Ip",
+        "X-Forwarded-For",
+        "X-Request-Id"
+    ],
+    "namespaces": [
+        {
+            "name": "advice_blog"
+        },
+        {
+            "name": "ticket_buying"
+        },
+        {
+            "name": "transaction"
+        },
+        {
+            "name": "raffle"
+        },
+        {
+            "name": "personal"
+        }
+    ],
+    "tls": true,
+    "tls_key": "/certs/stage.estato.com.ua.key",
+    "tls_cert": "/certs/stage.estato.com.ua.crt"
+}
